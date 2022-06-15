@@ -16,7 +16,6 @@ boolean monitor = true;
 boolean HaySonido = false;
 boolean agudo = false;
 boolean grave = false;
-boolean silencio = false;
 //=======================================
 
 OscP5 osc; // declaracion del objeto osc
@@ -74,7 +73,6 @@ void draw() {
   HaySonido = amp > MIN_AMP;
   agudo = pitch > MAX_PITCH;
   grave =  pitch > MIN_PITCH && pitch < MAX_PITCH;
-  silencio = HaySonido==false;
 
   gestorPitch.actualizar(pitch);
 
